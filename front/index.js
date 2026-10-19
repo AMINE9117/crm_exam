@@ -1,4 +1,7 @@
-const API_URL = 'http://localhost:3000';
+const isLocal = ['localhost', '127.0.0.1'].includes(location.hostname);
+const API_URL = isLocal
+    ? 'http://localhost:3000'
+    : 'https://aminenfissiback.vercel.app';
 
 async function chargerMessage() {
     const zone = document.getElementById('message');
