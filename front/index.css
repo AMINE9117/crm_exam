@@ -2,3 +2,8 @@ h1 {
     text-align: center;
     color: green;
 }
+
+#message {
+    text-align: center;
+    font-size: 1.2rem;
+}

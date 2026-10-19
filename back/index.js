@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB connecté'))
     .catch((err) => console.error('Erreur MongoDB :', err.message));
 
-// Bonus 2 : routes
+// Bonus 2
 app.get('/', (req, res) => {
     res.send('Hello from le front, Amine Nfissi');
 });
@@ -26,7 +26,7 @@ app.get('/sign-up', (req, res) => {
     res.send('Bienvenue sur la route sign up');
 });
 
-// Bonus 3 : route API
+// Bonus 3
 app.get('/api/test', (req, res) => {
     res.json({ message: 'Connexion Front-Back réussie' });
 });

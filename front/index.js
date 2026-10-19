@@ -1,12 +1,13 @@
 const API_URL = 'http://localhost:3000';
 
 async function chargerMessage() {
+    const zone = document.getElementById('message');
     try {
-        const res = await fetch(`${API_URL}/api/message`);
+        const res = await fetch(`${API_URL}/api/test`);
         const data = await res.json();
-        document.getElementById('message').textContent = data.message;
+        zone.textContent = data.message;
     } catch (err) {
-        document.getElementById('message').textContent = 'Erreur : serveur injoignable';
+        zone.textContent = 'Erreur : serveur injoignable';
         console.error(err);
     }
 }
